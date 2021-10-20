@@ -1,0 +1,278 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@600&family=Fraunces:wght@700;900&display=swap');
+
+:root {
+	--Very-dark-desaturated-blue: hsl(212, 27%, 19%);
+	--Very-dark-grayish-blue: hsl(213, 9%, 39%);
+	--Dark-grayish-blue: hsl(232, 10%, 55%);
+	--Grayish-blue: hsl(210, 4%, 67%);
+	--White: hsl(0, 0%, 100%);
+	--Soft-red: hsl(7, 99%, 70%);
+	--Yellow: hsl(51, 100%, 49%);
+	/*  (graphic design text) */
+	--Dark-desaturated-cyan: hsl(167, 40%, 24%);
+	/*  (photography text) */
+	--Dark-blue: hsl(198, 62%, 26%);
+	/* (footer) */
+	--Dark-moderate-cyan: hsl(168, 34%, 55%);
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+	margin: 0;
+	list-style: none;
+	text-decoration: none;
+}
+
+html {
+	font-family: 'Fraunces', serif;
+}
+
+p {
+	font-family: 'Barlow', sans-serif;
+	line-height: 1.6;
+}
+
+.row {
+	display: flex;
+}
+.col {
+	flex: 1;
+}
+
+nav,
+footer {
+	font-family: 'Barlow', sans-serif;
+}
+
+header {
+	height: 100vh;
+	background: url('./images/desktop/image-header.jpg');
+	background-size: cover;
+	background-position: center;
+	color: var(--White);
+	padding: 3em 0;
+	text-align: center;
+}
+nav {
+	display: flex;
+	align-items: center;
+	width: 90%;
+	margin: 0 auto;
+	max-width: 1440px;
+}
+
+.logo {
+	height: 34px;
+	width: 170px;
+}
+
+nav ul {
+	display: flex;
+	justify-content: space-between;
+	width: 50vmax;
+	margin-left: auto;
+}
+
+.icon-hamburger {
+	display: none;
+}
+a {
+	color: white;
+}
+
+.contact {
+	color: var(--Very-dark-desaturated-blue);
+	background: var(--White);
+	padding: 1em 2em;
+	border-radius: 2em;
+	font-family: 'Fraunces', serif;
+	font-weight: 700;
+	text-transform: uppercase;
+}
+
+.hero h1 {
+	font-size: 3vmax;
+	text-transform: uppercase;
+	width: 50%;
+	margin: 0 auto;
+	padding: 2em 0 1em 0;
+	letter-spacing: 0.2em;
+	text-align: center;
+}
+
+.hero::after {
+	content: '↓';
+	font-size: 8rem;
+}
+
+.feature--image {
+	width: 50vw;
+	height: 50vh;
+	background-size: cover;
+	background-repeat: none;
+	background-position: center;
+}
+
+.feature--text {
+	width: 50vw;
+	padding: 4em;
+	max-height: 50vh;
+}
+
+.feature--text h2 {
+	font-size: 2.5rem;
+	margin-bottom: 1em;
+}
+.feature--text p {
+	color: var(--Dark-grayish-blue);
+	margin-bottom: 2em;
+}
+
+.feature--text a {
+	color: inherit;
+	font-size: 1.15rem;
+	text-transform: uppercase;
+}
+
+.transform {
+	background-image: url('./images/desktop/image-transform.jpg');
+}
+
+.stand-out {
+	background-image: url('./images/desktop/image-stand-out.jpg');
+}
+
+.graphic-design {
+	background-image: url('./images/desktop/image-graphic-design.jpg');
+	color: var(--Dark-desaturated-cyan);
+}
+
+.photography {
+	background-image: url('images/desktop/image-photography.jpg');
+	color: var(--Dark-blue);
+}
+
+.graphic-design,
+.photography {
+	text-align: center;
+}
+
+h3 {
+	font-size: 1.6rem;
+}
+
+.graphic-design,
+.photography {
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+	gap: 1em;
+	padding: 4em;
+}
+
+.testimonial {
+	width: 80%;
+	margin: 0 auto;
+	text-align: center;
+	color: var(--Dark-grayish-blue);
+	padding: 9em 0;
+	display: flex;
+	flex-direction: column;
+	gap: 4em;
+}
+
+h4 {
+	text-transform: uppercase;
+	letter-spacing: 0.3em;
+	font-size: 1.15;
+}
+
+.testimonial .row {
+	gap: 2em;
+}
+
+.testimonial img {
+	width: 4rem;
+	height: 4rem;
+	border-radius: 2rem;
+	margin-bottom: 1em;
+}
+
+.testimonial .col {
+	display: flex;
+	flex-direction: column;
+	gap: 1.5em;
+	align-items: center;
+}
+
+h5 {
+	color: var(--Very-dark-desaturated-blue);
+	font-size: 1rem;
+	font-weight: 900;
+}
+
+.galary img {
+	width: 25%;
+}
+
+footer {
+	padding: 5em;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 5em;
+	color: var(--Dark-desaturated-cyan);
+	background-color: var(--Dark-moderate-cyan);
+}
+
+footer ul {
+	display: flex;
+	gap: 5em;
+}
+
+.social {
+	display: flex;
+	gap: 1.2em;
+}
+
+@media (max-width: 640px) {
+	.row {
+		flex-direction: column;
+	}
+
+	nav ul {
+		display: none;
+	}
+
+	.icon-hamburger {
+		display: block;
+		margin-left: auto;
+	}
+
+	.feature--image {
+		width: 100vw;
+	}
+	.feature--text {
+		width: 100vw;
+		padding: 1.5em;
+	}
+	.graphic-design,
+	.photography {
+		padding: 2em;
+	}
+
+	.testimonial {
+		padding: 4em 0;
+	}
+
+	.galary .row {
+		flex-direction: row;
+		flex-wrap: wrap;
+	}
+	.galary img {
+		width: 50%;
+	}
+}
